@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Survivor's Gambit 🌿</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       AUDIO (generated tones via Web Audio)
+  ═══════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 1: LANDING
+  ═══════════════════════════════════════ -->
+  <div id="screen-landing" class="screen active">
+    <div class="landing-wrap">
+      <div class="stars" aria-hidden="true"></div>
+
+      <div class="landing-hero">
+        <div class="logo-bounce">🌿</div>
+        <h1>Survivor's<br/><em>Gambit</em></h1>
+        <p class="hero-sub">Pick your traits · Face the wild · Survive!</p>
+
+        <div class="badge-row">
+          <span class="badge">👥 2 Players</span>
+          <span class="badge">🎒 Ages 7–11</span>
+          <span class="badge">⏱️ 15 min</span>
+          <span class="badge">📱 Play Online</span>
+        </div>
+
+        <div class="landing-btns">
+          <button class="btn btn-green btn-xl" id="btn-go-setup">
+            🦁 Play Now
+          </button>
+          <button class="btn btn-outline" id="btn-go-rules">
+            📖 How to Play
+          </button>
+          <button class="btn btn-outline" id="btn-go-edu">
+            🧑‍🏫 Educator Guide
+          </button>
+        </div>
+      </div>
+
+      <div class="animal-parade" aria-hidden="true">
+        <span>🦊</span><span>🐢</span><span>🦅</span>
+        <span>🐸</span><span>🐺</span><span>🦎</span>
+        <span>🦁</span><span>🐋</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 2: HOW TO PLAY
+  ═══════════════════════════════════════ -->
+  <div id="screen-rules" class="screen">
+    <div class="page-wrap">
+      <button class="back-btn" data-target="landing">← Back</button>
+      <h2>📖 How to Play</h2>
+
+      <div class="rules-steps">
+        <div class="rule-step">
+          <div class="step-icon">🃏</div>
+          <div class="step-num">1</div>
+          <h3>Get 5 Trait Cards</h3>
+          <p>You and your opponent each receive 5 random trait cards. These are YOUR animal's features!</p>
+        </div>
+        <div class="rule-step">
+          <div class="step-icon">🎯</div>
+          <div class="step-num">2</div>
+          <h3>Keep 3</h3>
+          <p>Choose the 3 traits you think will help you survive the most challenges. Tap cards to select them.</p>
+        </div>
+        <div class="rule-step">
+          <div class="step-icon">🌪️</div>
+          <div class="step-num">3</div>
+          <h3>Face a Challenge</h3>
+          <p>A wild event appears — a blizzard, a flood, a predator! Both players secretly pick one trait.</p>
+        </div>
+        <div class="rule-step">
+          <div class="step-icon">🤜🤛</div>
+          <div class="step-num">4</div>
+          <h3>Reveal Together</h3>
+          <p>Both players tap REVEAL at the same time. Your hidden picks flip over — no changing your mind!</p>
+        </div>
+        <div class="rule-step">
+          <div class="step-icon">🏆</div>
+          <div class="step-num">5</div>
+          <h3>Score & Survive</h3>
+          <p>
+            <span class="score-pill strong">🌟 Strong = 3 pts</span>
+            <span class="score-pill partial">⚡ Partial = 1 pt</span>
+            <span class="score-pill weak">💀 Weak = 0 pts</span>
+            <br/>Play 4 rounds. Highest score wins!
+          </p>
+        </div>
+        <div class="rule-step">
+          <div class="step-icon">💬</div>
+          <div class="step-num">6</div>
+          <h3>Talk About It</h3>
+          <p>After the game, discuss why some traits worked and others didn't. Science thinking!</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>💡 Online Play Tip:</strong> Sit side by side on the same device, 
+        or one player holds the phone for their turn. Both tap REVEAL at the same time — 
+        no peeking at each other's screens!
+      </div>
+
+      <button class="btn btn-green btn-xl center-btn" id="btn-rules-play">
+        🦁 Start Playing!
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 3: EDUCATOR GUIDE
+  ═══════════════════════════════════════ -->
+  <div id="screen-edu" class="screen">
+    <div class="page-wrap">
+      <button class="back-btn" data-target="landing">← Back</button>
+      <h2>🧑‍🏫 Educator's Guide</h2>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>🔬 Science Concepts</h3>
+          <ul>
+            <li><strong>Structural adaptation</strong> — body parts that aid survival (🐾 cards)</li>
+            <li><strong>Behavioural adaptation</strong> — actions that aid survival (🧠 cards)</li>
+            <li><strong>Environmental fit</strong> — traits only help in the right habitat</li>
+            <li><strong>Trade-offs</strong> — keeping 3 of 5 mirrors real biological constraints</li>
+            <li><strong>Natural selection</strong> — better-matched players score more = survive</li>
+          </ul>
+        </div>
+
+        <div class="edu-card">
+          <h3>💬 Discussion Prompts</h3>
+          <ul>
+            <li>Which trait helped in more than one challenge?</li>
+            <li>Did a strong trait suddenly become weak? What changed?</li>
+            <li>What would you swap — and what would you give up?</li>
+            <li>Why can't one animal be perfect at everything?</li>
+          </ul>
+        </div>
+
+        <div class="edu-card">
+          <h3>📅 5-Lesson Campaign</h3>
+          <div class="lesson-list">
+            <div class="lesson-row"><span class="lnum">1</span><span>What is an adaptation? → Play one game, sort cards into structural/behavioural</span></div>
+            <div class="lesson-row"><span class="lnum">2</span><span>Environmental fit → Replay with fixed desert challenges, compare outcomes</span></div>
+            <div class="lesson-row"><span class="lnum">3</span><span>Trade-offs → Choose only 2 traits; debate which 2 are best</span></div>
+            <div class="lesson-row"><span class="lnum">4</span><span>Natural selection → Play 3 games; tally which traits win most often</span></div>
+            <div class="lesson-row"><span class="lnum">5</span><span>Design an organism → Draw and name a creature; present to class</span></div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <h3>🚀 Extension Ideas</h3>
+          <ul>
+            <li><strong>Draw your animal:</strong> Sketch the creature with its 3 traits</li>
+            <li><strong>Habitat switch:</strong> Play challenges in Arctic, desert, rainforest</li>
+            <li><strong>Invent a trait:</strong> What challenge is it strong against? Weak against?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-note">
+        <strong>📚 Curriculum Links:</strong> UK KS2 Science — Living things and their habitats · 
+        Evolution and inheritance. Aligned with NGSS Life Science LS4.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 4: SETUP — Player names
+  ═══════════════════════════════════════ -->
+  <div id="screen-setup" class="screen">
+    <div class="page-wrap narrow">
+      <h2>🎒 Who's Playing?</h2>
+      <p class="setup-sub">Enter your names, then pick your animal avatar!</p>
+
+      <div class="player-name-grid">
+        <!-- Player 1 -->
+        <div class="name-card p1-card">
+          <div class="avatar-picker" id="avatar-picker-0">
+            <span class="current-avatar" id="current-avatar-0">🦁</span>
+            <div class="avatar-options" id="avatar-options-0"></div>
+          </div>
+          <label for="name-0">Player 1 Name</label>
+          <input type="text" id="name-0" class="name-input" placeholder="Player 1" maxlength="14" autocomplete="off" />
+          <div class="player-colour-label p1-label">Orange Team</div>
+        </div>
+
+        <!-- VS divider -->
+        <div class="vs-divider">VS</div>
+
+        <!-- Player 2 -->
+        <div class="name-card p2-card">
+          <div class="avatar-picker" id="avatar-picker-1">
+            <span class="current-avatar" id="current-avatar-1">🐺</span>
+            <div class="avatar-options" id="avatar-options-1"></div>
+          </div>
+          <label for="name-1">Player 2 Name</label>
+          <input type="text" id="name-1" class="name-input" placeholder="Player 2" maxlength="14" autocomplete="off" />
+          <div class="player-colour-label p2-label">Blue Team</div>
+        </div>
+      </div>
+
+      <button class="btn btn-green btn-xl center-btn" id="btn-go-draft">
+        🎴 Deal Cards!
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 5: DRAFT — Each player picks 3
+  ═══════════════════════════════════════ -->
+  <div id="screen-draft" class="screen">
+    <div class="draft-wrap">
+
+      <!-- Draft header -->
+      <div class="draft-header" id="draft-header">
+        <div class="draft-player-indicator" id="draft-player-indicator">
+          <span id="draft-avatar">🦁</span>
+          <span id="draft-name">Player 1</span>'s turn
+        </div>
+        <div class="draft-progress">
+          Pick <strong id="draft-pick-count">0</strong> / 3 traits
+        </div>
+      </div>
+
+      <!-- Privacy screen between draft turns -->
+      <div class="privacy-wall hidden" id="privacy-wall">
+        <div class="privacy-content">
+          <div class="privacy-icon" id="pw-icon">🦁</div>
+          <h2><span id="pw-name">Player 1</span> — look away!</h2>
+          <p>Hand the device to <strong id="pw-next-name">Player 2</strong>.</p>
+          <button class="btn btn-green btn-xl" id="btn-pw-ready">
+            ✅ I'm Ready — Show My Cards
+          </button>
+        </div>
+      </div>
+
+      <!-- Card hand -->
+      <div class="draft-hand" id="draft-hand"></div>
+
+      <!-- Draft instruction -->
+      <div class="draft-instruction" id="draft-instruction">
+        Tap 3 cards to keep them for the game.
+      </div>
+
+      <button class="btn btn-green draft-confirm hidden" id="btn-draft-confirm">
+        ✅ Keep These 3 →
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 6: GAME — Main gameplay
+  ═══════════════════════════════════════ -->
+  <div id="screen-game" class="screen">
+
+    <!-- Score bar -->
+    <div class="score-bar">
+      <div class="score-unit p1-score">
+        <span class="score-avatar" id="g-avatar-0">🦁</span>
+        <div class="score-info">
+          <span class="score-name" id="g-name-0">Player 1</span>
+          <span class="score-pts" id="g-score-0">0</span>
+        </div>
+      </div>
+      <div class="round-badge">
+        Round <span id="g-round">1</span>/4
+      </div>
+      <div class="score-unit p2-score">
+        <div class="score-info right">
+          <span class="score-name" id="g-name-1">Player 2</span>
+          <span class="score-pts" id="g-score-1">0</span>
+        </div>
+        <span class="score-avatar" id="g-avatar-1">🐺</span>
+      </div>
+    </div>
+
+    <!-- Challenge display -->
+    <div class="challenge-display" id="challenge-display">
+      <div class="challenge-card-face" id="challenge-face">
+        <div class="ch-icon" id="ch-icon">🌪️</div>
+        <div class="ch-title" id="ch-title">Loading…</div>
+        <div class="ch-desc" id="ch-desc"></div>
+	<!-- Revealed after both players pick -->
+<div id="ch-reveal-lists" class="ch-reveal-lists hidden"></div>
+      </div>
+    </div>
+
+    <!-- Game flow area — changes per sub-phase -->
+    <div class="game-flow" id="game-flow">
+
+      <!-- SUB-PHASE A: Player 0 picks (hidden from player 1) -->
+      <div class="flow-phase hidden" id="phase-pick-0">
+        <div class="pick-header p1-pick-header">
+          <span id="ph-avatar-0">🦁</span>
+          <strong id="ph-name-0">Player 1</strong> — pick your trait!
+          <span class="hidden-badge">🔒 Hidden</span>
+        </div>
+        <div class="pick-hand" id="pick-hand-0"></div>
+        <button class="btn btn-orange btn-lg confirm-pick-btn hidden" id="btn-confirm-pick-0">
+          🔒 Lock In My Pick
+        </button>
+      </div>
+
+      <!-- Privacy wall between picks -->
+      <div class="flow-phase hidden" id="phase-handoff">
+        <div class="handoff-card">
+          <div class="handoff-icon" id="ho-icon">🔒</div>
+          <h2 id="ho-title">Pick locked!</h2>
+          <p id="ho-msg">Hand the device to <strong id="ho-next">Player 2</strong>.</p>
+          <p class="handoff-sub">Don't show your screen!</p>
+          <button class="btn btn-green btn-xl" id="btn-handoff-ready">
+            ✅ Ready — Show My Cards
+          </button>
+        </div>
+      </div>
+
+      <!-- SUB-PHASE B: Player 1 picks (hidden from player 0) -->
+      <div class="flow-phase hidden" id="phase-pick-1">
+        <div class="pick-header p2-pick-header">
+          <span id="ph-avatar-1">🐺</span>
+          <strong id="ph-name-1">Player 2</strong> — pick your trait!
+          <span class="hidden-badge">🔒 Hidden</span>
+        </div>
+        <div class="pick-hand" id="pick-hand-1"></div>
+        <button class="btn btn-blue btn-lg confirm-pick-btn hidden" id="btn-confirm-pick-1">
+          🔒 Lock In My Pick
+        </button>
+      </div>
+
+      <!-- SUB-PHASE C: Both reveal -->
+      <div class="flow-phase hidden" id="phase-reveal">
+        <div class="reveal-zone">
+          <h2 class="reveal-title">🤜 Both Ready! 🤛</h2>
+          <p class="reveal-sub">Tap the button to flip your cards and see who survives!</p>
+          <button class="btn btn-green btn-xl reveal-btn" id="btn-reveal">
+            🎴 REVEAL CARDS!
+          </button>
+        </div>
+      </div>
+
+      <!-- SUB-PHASE D: Results -->
+      <div class="flow-phase hidden" id="phase-result">
+        <div class="results-display">
+          <div class="result-cards-row" id="result-cards-row"></div>
+          <div class="result-explanation-box" id="result-explanation-box"></div>
+          <button class="btn btn-green btn-lg" id="btn-next-round">
+            Next Challenge →
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /game-flow -->
+  </div><!-- /screen-game -->
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 7: END
+  ═══════════════════════════════════════ -->
+  <div id="screen-end" class="screen">
+    <div class="end-wrap">
+      <div class="confetti-zone" id="confetti-zone" aria-hidden="true"></div>
+
+      <div class="end-content">
+        <div class="end-trophy" id="end-trophy">🏆</div>
+        <h2 id="end-headline">Game Over!</h2>
+        <p id="end-sub">What an adventure!</p>
+
+        <!-- Score cards -->
+        <div class="end-scores">
+          <div class="end-score-card" id="end-card-0"></div>
+          <div class="end-score-card" id="end-card-1"></div>
+	<!-- What traits each player kept -->
+<div class="trait-summary" id="trait-summary"></div>
+        </div>
+
+        <!-- Round history -->
+        <div class="history-box">
+          <h3>📊 Round by Round</h3>
+          <div id="history-rows"></div>
+        </div>
+
+        <!-- Discussion prompts -->
+        <div class="prompt-box">
+          <h3>💬 Talk About It</h3>
+          <div class="prompt-display">
+            <div class="prompt-text" id="prompt-text">Loading…</div>
+            <div class="prompt-nav">
+              <button class="prompt-nav-btn" id="btn-prompt-prev">◀</button>
+              <span id="prompt-counter">1/4</span>
+              <button class="prompt-nav-btn" id="btn-prompt-next">▶</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="end-btns">
+          <button class="btn btn-green btn-xl" id="btn-play-again">🔄 Play Again</button>
+          <button class="btn btn-outline" id="btn-end-home">🏠 Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
